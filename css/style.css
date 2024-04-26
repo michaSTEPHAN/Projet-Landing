@@ -10,7 +10,6 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
 /* **************************************************************** */
 /*                            HEADER                                */
 /* **************************************************************** */
@@ -32,12 +31,10 @@ header {
 }
 .header-entete p{
     margin: 10px 100px 0px 100px;
-    /* margin-top: 10px; */
     font-size: 30px;
 }
 .header-entete i {
     margin: 10px 10px 0px 10px;
-    /* margin-top: 10px; */
     width: 35px;
     font-size: 15px;
 }
@@ -46,6 +43,16 @@ header {
     color: white;
     text-decoration: none;
 }
+
+/* ---------------------------------------------------------------- */
+/* Changement de couleur sur survol                                 */
+.nav-link:hover {
+    color: rgb(89, 60, 184);
+}
+.header-entete i:hover {
+    color: rgb(89, 60, 184);
+}
+/* ---------------------------------------------------------------- */
 
 /* **************************************************************** */
 /*                      PAGE 1 => SUBCSRIBE                         */
@@ -79,8 +86,10 @@ header {
     font-size: 10px;    
 }
 
+
+
 /* ---------------------------------------------------------------- */
-/* ==> SUPERPOSITION CHAMP EMAIL + BOUTON SUBSCRIBE                 */
+/* ==> Superposition des champs EMAIL + BOUTON SUBSCRIBE            */
 /* PARENT */
 .subscribe-mailparent {
     position: relative;
@@ -111,7 +120,6 @@ header {
     border-radius: 10px 10px 10px 10px;
     background: var(--bt-color)
 }
-/* ==> FIN SUPERPOSITION CHAMP EMAIL + BOUTON SUBSCRIBE*/
 /* ---------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------- */
@@ -124,8 +132,15 @@ header {
 }
 /* ---------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------- */
+/* Survol du bouton Subsribe                                        */
+.subscribe-bouton:hover {
+    background: rgb(89, 60, 184); 
+}
+/* ---------------------------------------------------------------- */
+
 /* **************************************************************** */
-/*                1 BIS => BOUTON FLECHE FIXE                       */
+/*                      BOUTON FLECHE FIXE                         */
 /* **************************************************************** */
 .subscribe-arrow {
     color: rgb(56, 53, 53);
@@ -135,6 +150,10 @@ header {
     position: fixed;
     z-index: 1000;
 }
+
+.subscribe-arrow a {
+    text-decoration: none;
+}    
 
 /* **************************************************************** */
 /*                         PAGE 2 => FEATURES                       */
@@ -185,11 +204,13 @@ header {
     padding-right: 20px; 
 }
 
+/* ---------------------------------------------------------------- */
 /* Effet Survol : On remonte de 10px  */
 .features-allcard :hover {
     transform: translateY(-10px);
     transition: 1s;
 }
+/* ---------------------------------------------------------------- */
 
 /* **************************************************************** */
 /*                      PAGE 2bis => HOW IT'S WORK                  */
@@ -345,6 +366,37 @@ header {
 }
 
 /* **************************************************************** */
+/*                      PAGE 4 BIS => CLIENT                        */
+/* **************************************************************** */
+.clients-txt h2 {
+    text-align: center;  
+    padding-top: 70px; 
+    padding-bottom: 30px; 
+}
+.clients-txt p {
+    padding-right: 500px;
+    padding-left: 500px;
+    text-align: center; 
+}
+
+.clients-img {
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+.clients-img img {
+    width: 150px;
+    padding-right: 50px;
+    filter: brightness(50%);
+}    
+
+.clients-img:hover img {
+    filter: grayscale(0);
+}    
+
+/* **************************************************************** */
 /*                         PAGE 5 => BLOG                           */
 /* **************************************************************** */
 .blog-intro {
@@ -468,7 +520,7 @@ header {
 /* ---------------------------------------------------------------- */
 /*                 PRICING -> Partie Our Princing                   */
 .pricing-tableau {
-    background: rgba(224, 214, 204, 0.548);
+    background: rgba(224, 214, 204, 0.548);    
 }
 
 .pricing-intro {
@@ -486,7 +538,8 @@ header {
 
 .pricing-member {
     background: white;
-    width: 250px; 
+    width: 250px;
+    border-radius: 10px 10px 10px 10px; 
 }
 
 .pricing-member-li {
@@ -510,7 +563,29 @@ header {
     transform: translateY(-10px);
 }
 
-
+/* ---------------------------------------------------------------- */
+/* Gestion du carré 20%                                             */
+.bouton-carré20 {
+    z-index: 1;
+    top: 5px;
+    align-items: right;
+    width: 50px;
+    height: 50px;
+    border: none;
+    color: white;
+    border-radius: 0px 10px 0px 10px;
+    background: var(--bt-color)
+}
+.carré20 {
+    padding-left: 33px;
+}
+.pourtest h2 {
+    padding-left: 100px;
+}
+.pourtest {
+    display: flex;  
+}
+/* ---------------------------------------------------------------- */
 /* Affichage du titre Starter/aDVANCED/... */
 .pricing-member h2 {
     text-align: center; 
@@ -530,8 +605,8 @@ header {
 }
 .duree .month {
     font-size: 14px;
+    padding-top: 8%;
 }
-
 
 .pricing-member p {
     font-size: 14px;
