@@ -1,0 +1,573 @@
+:root {
+    --bg-color: rgba(89, 176, 211, 0.548);
+    --bt-color: rgba(18, 89, 156, 0.548);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* **************************************************************** */
+/*                            HEADER                                */
+/* **************************************************************** */
+header {
+    height : 100px;   
+    background: var(--bg-color);
+}
+.header-entete {   
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    color: white;
+}
+.header-entete nav{
+    margin: 10px 200px 0px 100px;
+    margin-top: 10px;
+    font-size: 14px;
+    
+}
+.header-entete p{
+    margin: 10px 100px 0px 100px;
+    /* margin-top: 10px; */
+    font-size: 30px;
+}
+.header-entete i {
+    margin: 10px 10px 0px 10px;
+    /* margin-top: 10px; */
+    width: 35px;
+    font-size: 15px;
+}
+.nav-link {
+    margin: 10px 10px 0px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+/* **************************************************************** */
+/*                      PAGE 1 => SUBCSRIBE                         */
+/* **************************************************************** */
+#subscribe {
+    height:600px;
+    padding-bottom: 70px;
+    display: flex;
+    background: var(--bg-color);   
+    justify-content: center; 
+}
+
+.subscribe-topic {
+   width: 400px;
+   padding-top: 70px;   
+   padding-bottom: 50px;
+}
+
+.subscribe-text {
+    padding-bottom: 50px;
+}
+
+.subscribe-text h1 {
+    color: black;
+    font-size: 40px;
+    padding-bottom: 50px;
+}
+
+.subscribe-texte p {
+    color: black;
+    font-size: 10px;    
+}
+
+/* ---------------------------------------------------------------- */
+/* ==> SUPERPOSITION CHAMP EMAIL + BOUTON SUBSCRIBE                 */
+/* PARENT */
+.subscribe-mailparent {
+    position: relative;
+}
+
+/* ENFANT 1 */
+.subscribe-email {
+    position: absolute;
+    width: 100%;
+    height: 100%;    
+    width: 400px;
+    height: 40px;
+    border: none;
+    color: rgb(187, 182, 182);
+    border-radius: 20px 20px 20px 20px;
+    background: rgba(235, 242, 245, 0.548);
+} 
+
+/* ENFANT 2 */
+.subscribe-bouton {
+    z-index: 1;
+    top: 5px;
+    right: 10px;
+    width: 150px;
+    height: 30px;
+    border: none;
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+    background: var(--bt-color)
+}
+/* ==> FIN SUPERPOSITION CHAMP EMAIL + BOUTON SUBSCRIBE*/
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/* Affichage de l'image avec le chat                                */
+.subscribe-image img {
+    width: 600px;
+    height: 400px;
+    object-fit: cover; 
+    padding-left: 50px;
+}
+/* ---------------------------------------------------------------- */
+
+/* **************************************************************** */
+/*                1 BIS => BOUTON FLECHE FIXE                       */
+/* **************************************************************** */
+.subscribe-arrow {
+    color: rgb(56, 53, 53);
+    font-size: 50px;
+    top: 600px;
+    right: 20px;
+    position: fixed;
+    z-index: 1000;
+}
+
+/* **************************************************************** */
+/*                         PAGE 2 => FEATURES                       */
+/* **************************************************************** */
+.features-intro {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;
+}
+
+.features-allcard {   
+    padding-bottom: 70px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+} 
+
+.features-card {   
+    background: var(--bg-color);
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding-bottom: 50px;
+    padding-top: 50px;
+}
+
+.features-image i {
+    width: 300px;    
+    height: 20px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 60px;
+}
+
+.features-text h2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.features-text p {    
+    font-size: 14px;
+    color: white;
+    text-align: center;  
+    padding-left: 20px;
+    padding-right: 20px; 
+}
+
+/* Effet Survol : On remonte de 10px  */
+.features-allcard :hover {
+    transform: translateY(-10px);
+    transition: 1s;
+}
+
+/* **************************************************************** */
+/*                      PAGE 2bis => HOW IT'S WORK                  */
+/* **************************************************************** */
+.howitworks-2 {
+    overflow: hidden;
+    height: 200px;
+    background-color:rgb(241, 238, 238);
+    text-align: center;
+    padding-top: 70px;
+}
+
+/* **************************************************************** */
+/*                         PAGE 3 => TEAM                           */
+/* **************************************************************** */
+#team {
+    padding-bottom: 70px;
+    padding-top: 70px;
+    justify-content: center;    
+}   
+
+.team-intro h2 {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 500px;
+    padding-right: 500px;
+} 
+.team-intro p {
+    text-align: center; 
+    padding-left: 420px;
+    padding-right: 420px;   
+}    
+
+.team-allmember{
+    padding-top: 70px;
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+}
+.team-member h2 {
+    text-align: center;
+    padding-top: 10px;
+} 
+.team-member p {
+    text-align: center;
+    padding-bottom: 40px;
+}  
+
+/* Gestion de l'affichage des icônes au-dessus de l'image */
+.member {
+    position: relative;
+    overflow: hidden;
+}
+
+.member .icones {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+
+    /* On positionne les icones à côté de l'image */
+    /* et comme on a mis 1 overflow: hidden on ne les voit pas*/
+    top:0;
+    left: -30px;
+    gap:5px;
+    transition: 1s;
+}
+.member .icones i {
+    background: white;
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.member:hover .icones {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+/* Gestion de l'image en affichage normal */
+.team-member img {
+    width: 200px;
+    height: 200px;
+
+    /* On met l'image dans un rond */
+    border-radius: 50%;
+    
+    /* On met l'image en noir/blanc */
+    filter:grayscale(1);
+}
+
+/* Gestion de l'image en SURVOL */
+.team-member img:hover {
+    /* On remet l'image en couleur sur survol */
+    filter:grayscale(0);
+
+    /* Zoom sur l'image */
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+/* **************************************************************** */
+/*                   PAGE 4 => EFFET PARALLAX                       */
+/* **************************************************************** */
+.parallax-txt {
+
+    position: relative;
+
+    /* The image used */
+    background-image: url("parallax.png");    
+    
+    /* Set a specific height */
+    min-height: 500px;
+    
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.parallax-bouton {
+    position: absolute;   
+}
+
+.parallax {
+    position: relative;
+}
+
+/* On met le texte en blanc */
+.parallax-txt h2 {
+    color:white;
+    text-align: center;
+    padding-top: 200px;
+}
+
+/* On met le texte en blanc */
+.parallax-txt p {
+    color:white;
+    text-align: center;
+}
+
+/* On met le bouton en blanc et transparent */
+.parallax-bouton {
+    color:white;
+    background: transparent;
+    border: 1px solid white;
+    justify-content: center;
+    bottom: 45%;
+    left: 50%;
+    border-radius: 5px 5px 5px 5px;
+    width: 100px;
+    height: 25px;
+}
+
+/* **************************************************************** */
+/*                         PAGE 5 => BLOG                           */
+/* **************************************************************** */
+.blog-intro {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    text-align: center;    
+}
+
+.blog-intro h2 {
+    font-size: 22px;
+    padding-bottom: 50px;
+}
+
+.blog-allmember {
+    padding-bottom: 70px;
+    display: flex; 
+    gap: 20px;   
+    align-items: center;
+    justify-content: center;    
+}
+
+/* Mise en forme des images */
+.blog-member img {
+    width: 400px;
+    border-radius: 5%;
+}
+
+/* ---------------------------------------------------------------- */
+/* Gestion de l'affiche des infos sur les images au SURVOL          */
+.bloginfo {
+    position: relative;
+    overflow: hidden;
+}
+.infos {
+    position: absolute;
+    top: 0;
+    left: -150px;
+    color: white;
+}
+.bloginfo:hover .infos {
+    left: 10px;
+    top: 10%;   
+    transition: 1s; 
+}
+.blog-member:hover img {
+    filter: grayscale(70%);
+}
+
+/* On affiche l'icône + libelle côte à côte */
+.infos-l1 {
+    display: flex;
+}
+.infos-l2 {
+    display: flex;
+}
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/* Mise en forme du texte sous les images                           */
+.blog-member h2 {
+    text-align: left;
+    font-size: 22px;
+}
+.blog-member p {
+    width: 400px;
+    text-align: left;
+    font-size: 16px;
+}
+.blog-member .blog-readmore {
+    text-align: left;
+    font-size: 18px;
+    color: blue;
+}
+/* ---------------------------------------------------------------- */
+
+/* **************************************************************** */
+/*                         PAGE 6 => PRICING                        */
+/* ******************************************************************/
+/* ---------------------------------------------------------------- */
+/* Mise en forme de la partie du haut (texte + image)               */
+.pricing-text {
+    display: flex;     
+    /* width: 1000px; */
+    justify-content: center;
+}
+
+.pricing-text-g {
+    width: 500px;
+}
+
+.pricing-text-g h2 {
+    padding-bottom: 20px;
+}
+
+.pricing-text-g p {
+    padding-bottom: 20px;
+}
+
+.pricing-image img {
+    width: 400px;
+    object-fit: cover; 
+    padding-left: 50px;
+}
+
+.nb-happy-user {
+    display: flex;
+    gap: 30px;
+    padding-bottom: 20px;
+}
+
+.pricing-btnlearn {
+    border-radius: 5px 5px 5px 5px;
+    background: var(--bt-color);
+    border: none;
+    color: white;
+    width: 100px;
+    height: 25px;
+}
+/* ---------------------------------------------------------------- */
+
+/* ---------------------------------------------------------------- */
+/*                 PRICING -> Partie Our Princing                   */
+.pricing-tableau {
+    background: rgba(224, 214, 204, 0.548);
+}
+
+.pricing-intro {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    text-align: center; 
+}
+
+.pricing-allprice {
+    display: flex;   
+    justify-content: center;
+    gap: 20px;
+    padding-bottom: 50px
+}
+
+.pricing-member {
+    background: white;
+    width: 250px; 
+}
+
+.pricing-member-li {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 10px;  
+}
+
+/* On met la bonne couleur sur l'icone (Vert/Rouge) */
+/* Création de 2 fonctions green et red que l'on appelle dans le html : */
+/*     <i class="fa-regular fa-circle-check green"> pour mettre l'icône dans la bonne couleur */
+.green {
+    color: green;
+}
+.red {
+    color: red;
+}
+
+/* On met la 2e case en decalée */
+.pricing-member:nth-child(2) {
+    transform: translateY(-10px);
+}
+
+
+/* Affichage du titre Starter/aDVANCED/... */
+.pricing-member h2 {
+    text-align: center; 
+    font-size: 14px;
+    padding-bottom: 10px;  
+    padding-top: 10px;  
+}
+
+/* Affichage du $9/month */
+.duree {
+    display: flex;  
+    justify-content: center; 
+}
+.duree .dollar {
+    font-size: 35px;
+    color: blue;
+}
+.duree .month {
+    font-size: 14px;
+}
+
+
+.pricing-member p {
+    font-size: 14px;
+    padding-bottom: 10px;  
+}
+
+/* Gestion du bouton "JOIN NOW" */
+.pricing-btnjoin {
+    border-radius: 5px 5px 5px 5px;
+    background: var(--bt-color);
+    border: none;
+    color: white;
+    width: 150px;
+    height: 25px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+/* **************************************************************** */
+/*                             FOOTER                               */
+/* **************************************************************** */
+footer {
+   height: 100px;
+   text-align: center;
+   background-color: black; 
+   color:  rgba(89, 176, 211, 0.548);   
+}
+
+small a {
+    color:  rgba(89, 176, 211, 0.548);
+}
+
+.footer-image i {
+    margin-top: 10px;
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+}
