@@ -1,6 +1,10 @@
+/* **************************************************************** */
+/*    DANS ROOT ON DEFINIT DES COULEURS DE BASES REUTILISABLES      */
+/* **************************************************************** */
 :root {
-    --bg-color: rgba(89, 176, 211, 0.548);
+    --bg-color: rgb(139, 195, 245);
     --bt-color: rgba(18, 89, 156, 0.548);
+    --ft--color: rgb(#1294b8);
 }
 
 * {
@@ -14,13 +18,16 @@
 /*                            HEADER                                */
 /* **************************************************************** */
 header {
-    height : 100px;   
-    background: var(--bg-color);
+    height : 150px;   
+    background: radial-gradient(rgb(139,195,245), #1294b8);
 }
-.header-entete {   
+.header-entete {  
+    padding-top: 20px; 
     justify-content: center;
     text-align: center;
     display: flex;
+    justify-content: space-arround;
+    flex-wrap: wrap;
     color: white;
 }
 .header-entete nav{
@@ -44,13 +51,16 @@ header {
     text-decoration: none;
 }
 
+
 /* ---------------------------------------------------------------- */
 /* Changement de couleur sur survol                                 */
 .nav-link:hover {
     color: rgb(89, 60, 184);
+    cursor: pointer;
 }
 .header-entete i:hover {
     color: rgb(89, 60, 184);
+    cursor: pointer;
 }
 /* ---------------------------------------------------------------- */
 
@@ -58,17 +68,20 @@ header {
 /*                      PAGE 1 => SUBCSRIBE                         */
 /* **************************************************************** */
 #subscribe {
-    height:600px;
-    padding-bottom: 70px;
+    height:100vh;
     display: flex;
-    background: var(--bg-color);   
     justify-content: center; 
+    background: radial-gradient(rgb(139,195,245), #1294b8);
+    
+    padding-left: 10px;
+    /* align-items: flex-start; */
 }
 
 .subscribe-topic {
    width: 400px;
    padding-top: 70px;   
    padding-bottom: 50px;
+   padding-right: 40px;
 }
 
 .subscribe-text {
@@ -86,8 +99,6 @@ header {
     font-size: 10px;    
 }
 
-
-
 /* ---------------------------------------------------------------- */
 /* ==> Superposition des champs EMAIL + BOUTON SUBSCRIBE            */
 /* PARENT */
@@ -97,38 +108,46 @@ header {
 
 /* ENFANT 1 */
 .subscribe-email {
-    position: absolute;
+    /* position: absolute; */
     width: 100%;
-    height: 100%;    
-    width: 400px;
+    height: 100%;
+    /* width: 400px; */
     height: 40px;
     border: none;
     color: rgb(187, 182, 182);
     border-radius: 20px 20px 20px 20px;
     background: rgba(235, 242, 245, 0.548);
+    padding: 10px;
 } 
 
 /* ENFANT 2 */
 .subscribe-bouton {
     z-index: 1;
+    position: absolute;
     top: 5px;
-    right: 10px;
+    right: 5px;
+    /* right: 70px; */
     width: 150px;
     height: 30px;
     border: none;
     color: white;
-    border-radius: 10px 10px 10px 10px;
-    background: var(--bt-color)
+    border-radius: 20px 20px 20px 20px;
+    background: var(--bt-color);
+    cursor: pointer;
 }
 /* ---------------------------------------------------------------- */
 
 /* ---------------------------------------------------------------- */
 /* Affichage de l'image avec le chat                                */
+.subscribe-image {
+    width: 500px;
+}
 .subscribe-image img {
-    width: 600px;
-    height: 400px;
-    object-fit: cover; 
-    padding-left: 50px;
+    width: 100%;
+    /* height: 100%; */
+    /* object-fit: cover;  */
+    /* padding-left: 150px; */
+    margin-top: 50px;
 }
 /* ---------------------------------------------------------------- */
 
@@ -142,18 +161,21 @@ header {
 /* **************************************************************** */
 /*                      BOUTON FLECHE FIXE                         */
 /* **************************************************************** */
-.subscribe-arrow {
+ .subscribe-arrow {
     color: rgb(56, 53, 53);
     font-size: 50px;
-    top: 600px;
-    right: 20px;
+    bottom: 100px;
+    right: 30px;
     position: fixed;
-    z-index: 1000;
 }
 
 .subscribe-arrow a {
     text-decoration: none;
 }    
+
+.subscribe-arrow {
+    cursor: pointer;
+}
 
 /* **************************************************************** */
 /*                         PAGE 2 => FEATURES                       */
@@ -167,15 +189,18 @@ header {
 .features-allcard {   
     padding-bottom: 70px;
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
 } 
 
 .features-card {   
     background: var(--bg-color);
+    background: radial-gradient(rgb(139,195,245), #1294b8);
+
     width: 300px;
     border-radius: 5px;
-    border: 1px solid black;
+    border: none;
     padding-bottom: 50px;
     padding-top: 50px;
 }
@@ -205,10 +230,11 @@ header {
 }
 
 /* ---------------------------------------------------------------- */
-/* Effet Survol : On remonte de 10px  */
-.features-allcard :hover {
+/* Effet Survol : On remonte de 10px                                */
+.features-card:hover {
     transform: translateY(-10px);
     transition: 1s;
+    cursor: pointer;
 }
 /* ---------------------------------------------------------------- */
 
@@ -221,6 +247,9 @@ header {
     background-color:rgb(241, 238, 238);
     text-align: center;
     padding-top: 70px;
+}
+.howitworks-2 h2 {
+    padding-bottom: 20px;
 }
 
 /* **************************************************************** */
@@ -235,18 +264,19 @@ header {
 .team-intro h2 {
     text-align: center;
     padding-bottom: 20px;
-    padding-left: 500px;
-    padding-right: 500px;
+    /* padding-left: 500px;
+    padding-right: 500px; */
 } 
 .team-intro p {
     text-align: center; 
-    padding-left: 420px;
-    padding-right: 420px;   
+    /* padding-left: 420px;
+    padding-right: 420px;    */
 }    
 
 .team-allmember{
     padding-top: 70px;
     display: flex;
+    flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
 }
@@ -259,10 +289,12 @@ header {
     padding-bottom: 40px;
 }  
 
-/* Gestion de l'affichage des icônes au-dessus de l'image */
+/* ---------------------------------------------------------------- */
+/* Gestion de l'affichage des icônes au-dessus de l'image           */
 .member {
     position: relative;
     overflow: hidden;
+    border-radius: 200px;
 }
 
 .member .icones {
@@ -270,8 +302,8 @@ header {
     flex-direction: column;
     position: absolute;
 
-    /* On positionne les icones à côté de l'image */
-    /* et comme on a mis 1 overflow: hidden on ne les voit pas*/
+    /* On positionne les icones à côté de l'image                  */
+    /* et comme on a mis 1 overflow: hidden on ne les voit pas     */
     top:0;
     left: -30px;
     gap:5px;
@@ -286,10 +318,13 @@ header {
 .member:hover .icones {
     left: 10px;
     top: 50%;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    cursor: pointer;
 }
+/* ---------------------------------------------------------------- */
 
-/* Gestion de l'image en affichage normal */
+/* ---------------------------------------------------------------- */
+/* Gestion de l'image en affichage normal                           */
 .team-member img {
     width: 200px;
     height: 200px;
@@ -300,27 +335,39 @@ header {
     /* On met l'image en noir/blanc */
     filter:grayscale(1);
 }
+/* ---------------------------------------------------------------- */
 
-/* Gestion de l'image en SURVOL */
+/* ---------------------------------------------------------------- */
+/* Gestion de l'image en SURVOL                                     */
 .team-member img:hover {
     /* On remet l'image en couleur sur survol */
     filter:grayscale(0);
 
-    /* Zoom sur l'image */
-    transform: scale(1.2);
+    /* Zoom sur l'image */    
+    scale: 1.1;
     transition: 1s;
+    cursor: pointer;
 }
+/* ---------------------------------------------------------------- */
 
 /* **************************************************************** */
 /*                   PAGE 4 => EFFET PARALLAX                       */
 /* **************************************************************** */
+#parallax {
+    background-image:  url("parallax.png");
+    background-size: cover;
+    background-position: center;
+}
+
 .parallax-txt {
 
     position: relative;
 
-    /* The image used */
-    background-image: url("parallax.png");    
-    
+    /* The image used                                             */
+    /* background-image: url("parallax.png");                     */
+    background: rgba(0, 0, 0, 0.5);
+    /* background: linear-gradient(rgba(0, 0, 0, 0.1));           */
+
     /* Set a specific height */
     min-height: 500px;
     
@@ -339,30 +386,42 @@ header {
     position: relative;
 }
 
-/* On met le texte en blanc */
+/* On met le texte en blanc                                       */
 .parallax-txt h2 {
     color:white;
     text-align: center;
     padding-top: 200px;
+    padding-bottom: 10px; 
 }
 
-/* On met le texte en blanc */
+/* On met le texte en blanc                                      */
 .parallax-txt p {
     color:white;
     text-align: center;
+    padding-bottom: 10px;
 }
 
-/* On met le bouton en blanc et transparent */
-.parallax-bouton {
+
+/* On met le bouton en blanc et transparent                     */
+.parallax-txt button {
     color:white;
     background: transparent;
     border: 1px solid white;
     justify-content: center;
-    bottom: 45%;
-    left: 50%;
+    bottom: 40%;
+    right: 50%;
     border-radius: 5px 5px 5px 5px;
     width: 100px;
-    height: 25px;
+    height: 30px;
+}
+
+.parallax-bouton:hover {
+    background: white;
+    color: rgb(90, 86, 86);
+}
+
+.parallax-img {
+
 }
 
 /* **************************************************************** */
@@ -374,13 +433,14 @@ header {
     padding-bottom: 30px; 
 }
 .clients-txt p {
-    padding-right: 500px;
-    padding-left: 500px;
+    /* padding-right: 500px;
+    padding-left: 500px; */
     text-align: center; 
 }
 
 .clients-img {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding-top: 70px;
     padding-bottom: 70px;
@@ -399,6 +459,7 @@ header {
 /* **************************************************************** */
 /*                         PAGE 5 => BLOG                           */
 /* **************************************************************** */
+
 .blog-intro {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -413,12 +474,13 @@ header {
 .blog-allmember {
     padding-bottom: 70px;
     display: flex; 
+    flex-wrap: wrap;
     gap: 20px;   
     align-items: center;
     justify-content: center;    
 }
 
-/* Mise en forme des images */
+/* Mise en forme des images                                         */
 .blog-member img {
     width: 400px;
     border-radius: 5%;
@@ -442,10 +504,14 @@ header {
     transition: 1s; 
 }
 .blog-member:hover img {
-    filter: grayscale(70%);
+    filter: brightness(50%);
 }
 
-/* On affiche l'icône + libelle côte à côte */
+.imgblog:hover {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+/* On affiche l'icône + libelle côte à côte                         */
 .infos-l1 {
     display: flex;
 }
@@ -459,16 +525,20 @@ header {
 .blog-member h2 {
     text-align: left;
     font-size: 22px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 .blog-member p {
+    padding-bottom: 10px;
     width: 400px;
     text-align: left;
     font-size: 16px;
 }
 .blog-member .blog-readmore {
+    padding-top: 10px;
     text-align: left;
     font-size: 18px;
-    color: blue;
+    color: var(--bt-color);
 }
 /* ---------------------------------------------------------------- */
 
@@ -479,12 +549,13 @@ header {
 /* Mise en forme de la partie du haut (texte + image)               */
 .pricing-text {
     display: flex;     
-    /* width: 1000px; */
     justify-content: center;
+    margin-bottom: 50px;
 }
 
 .pricing-text-g {
     width: 500px;
+    margin-left: 30px;
 }
 
 .pricing-text-g h2 {
@@ -509,11 +580,15 @@ header {
 
 .pricing-btnlearn {
     border-radius: 5px 5px 5px 5px;
-    background: var(--bt-color);
+    background: radial-gradient(rgb(139,195,245), #1294b8);
     border: none;
     color: white;
     width: 100px;
     height: 25px;
+}
+
+.pricing-btnlearn:hover {
+    cursor: pointer;
 }
 /* ---------------------------------------------------------------- */
 
@@ -531,6 +606,7 @@ header {
 
 .pricing-allprice {
     display: flex;   
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding-bottom: 50px
@@ -548,7 +624,7 @@ header {
     padding-bottom: 10px;  
 }
 
-/* On met la bonne couleur sur l'icone (Vert/Rouge) */
+/* On met la bonne couleur sur l'icone (Vert/Rouge)                     */
 /* Création de 2 fonctions green et red que l'on appelle dans le html : */
 /*     <i class="fa-regular fa-circle-check green"> pour mettre l'icône dans la bonne couleur */
 .green {
@@ -574,7 +650,7 @@ header {
     border: none;
     color: white;
     border-radius: 0px 10px 0px 10px;
-    background: var(--bt-color)
+    background: radial-gradient(rgb(139,195,245), #1294b8);
 }
 .carré20 {
     padding-left: 33px;
@@ -613,10 +689,15 @@ header {
     padding-bottom: 10px;  
 }
 
+.pricing-member .pricing-member-li {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
 /* Gestion du bouton "JOIN NOW" */
 .pricing-btnjoin {
     border-radius: 5px 5px 5px 5px;
-    background: var(--bt-color);
+    background: radial-gradient(rgb(139,195,245), #1294b8);
     border: none;
     color: white;
     width: 150px;
@@ -624,6 +705,10 @@ header {
     margin-top: 20px;
     margin-left: 40px;
     margin-bottom: 20px;
+}
+
+.pricing-btnjoin {
+    cursor: pointer;
 }
 
 /* **************************************************************** */
@@ -636,7 +721,7 @@ footer {
    color:  rgba(89, 176, 211, 0.548);   
 }
 
-small a {
+footer .nav-link {
     color:  rgba(89, 176, 211, 0.548);
 }
 
@@ -646,3 +731,12 @@ small a {
     height: 50px;
     font-size: 30px;
 }
+
+/* **************************************************************** */
+/*                     GESTION VERSION MOBILE                       */
+/* **************************************************************** */
+@media only screen and (max-width: 768px) {
+    main #subscribe .features-allcard{
+      flex-direction: column;      
+    }
+  }
