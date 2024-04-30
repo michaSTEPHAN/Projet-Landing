@@ -37,16 +37,16 @@ header {
     
 }
 .header-entete p{
-    margin: 10px 100px 0px 100px;
+    margin: 10px 10px 10px 10px;
     font-size: 30px;
 }
 .header-entete i {
-    margin: 10px 10px 0px 10px;
+    margin: 10px 10px 10px 10px;
     width: 35px;
     font-size: 15px;
 }
 .nav-link {
-    margin: 10px 10px 0px 10px;
+    margin: 10px 10px 10px 10px;
     color: white;
     text-decoration: none;
 }
